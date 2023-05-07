@@ -22,7 +22,8 @@ class Application(Application):
             (r'/students/api/user', UserHandler)
         ]
 
-        settings = dict()
+        #settings = dict()
+        settings = {'autoreload': True} # extension to reload modules before executing code
 
         super(Application, self).__init__(handlers, **settings)
 
